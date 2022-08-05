@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+:root{
+    --Moderate-violet: hsl(263, 55%, 52%);
+    --Very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --Very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --White: hsl(0, 0%, 100%);
+    --Light-gray: hsl(0, 0%, 81%);
+    --Light-grayish-blue: hsl(210, 46%, 95%);
+    --font: 'Barlow Semi Condensed', sans-serif;;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Light-gray);
+}
+.container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+.container__section{
+    display: grid;
+    grid-template-columns: minmax(250px ,1fr);
+    place-content: center;
+    padding: 2em 0;
+    gap: 1em;
+    font-family: var(--font);
+    
+}
+.container__section__card{
+    padding: 1.5em;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    width: 350px;
+}
+.container__section__card--bg1{
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-color: hsla(263, 61%, 52%, 0.87);
+   
+}
+.container__section__card__img-container{
+    display: flex;
+    align-items: flex-start;
+}
+.container__section__card__img-container__img{
+  border-radius: 50%;
+  border: 3px solid  rgba(96, 46, 175, 0.795);
+  width: 40px;
+  margin-right: 15px;
+}
+.container__section__card__data-people{
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+}
+.container__section__card__person__name, .container__section__card__txt__description{
+    color: var(--White);
+}
+.container__section__card__person__profession,.container__section__card__txt__commet{
+    color:  rgba(255, 255, 255, 50%);
+}
+.container__section__card__txt{
+    padding: 7px 13px;
+}
+
+.container__section__card__txt__description{
+    font-size: 1.4em;
+    font-weight: 500;
+    padding-bottom: .6em;
+}
+.container__section__card__txt__commet{
+    font-size: 13.2px;
+    font-weight: 500;
+    margin-bottom: .5em;
+}
+.container__section__card--bg2{
+    background-color: var(--Very-dark-grayish-blue);
+}
+.container__section__card--bg3{
+    background-color:  rgba(255, 255, 255, 0.788);
+}
+.container__section__card__person__profession--color,.container__section__card__txt__commet--color,.container__section__card__person__name--color, .container__section__card__txt__description--color{
+    color: rgba(66, 66, 66, 0.575);
+}
+.container__section__card__img-container__img--bg{
+    border-color: white;
+}
+.container__section__card--bg4{
+    background-color: var(--Very-dark-blackish-blue);
+}
+@media (min-width:1024px){
+    .container{
+        height: 100%;
+    }
+    .container__section{
+        grid-template-columns:  550px 300px 300px;
+        grid-template-areas: 
+        "card1 card2 card5"
+        "card3 card4 . ";
+        padding: 5% 0;
+    }
+    .container__section__card-1,.container__section__card-4{
+        width: 550px;
+        
+    }
+    .container__section__card-1,.container__section__card-2,.container__section__card-3,
+    .container__section__card-4,.container__section__card-5{
+        box-shadow: 10px 10px 5px 0px rgba(112, 110, 110, 0.719);
+    }
+    .container__section__card-1{
+        grid-area: card1;
+        height: 260px;
+    }
+    .container__section__card-2{
+        grid-area: card2;
+        width: 100%;
+        height: 250px;
+    }
+    .container__section__card-3{
+        grid-area: card3;
+        width: 300px;
+        height: 250px;
+    }
+    .container__section__card-4{
+        grid-area: card4;
+        height: 250px;
+        transform: translateX(-45%);
+    }
+    .container__section__card-5{
+        grid-area: card5;
+        height: 520px;
+        transform: translateY(3%);
+        grid-row: 7/-4;
+    }
+    .container__section__card__data-people{
+        display: flex;
+        flex-direction: column;
+        font-size: 13px;
+    }
+    .container__section__card__txt{
+        padding: 7px 13px;
+    }
+    .container__section__card__txt__description{
+        font-size: 17px;
+      
+    }
+    .container__section__card__txt__commet{
+        font-size: 15px;
+    }
+}
